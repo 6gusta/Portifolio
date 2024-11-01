@@ -109,12 +109,45 @@ nav ul li a:hover {
 }
 
 .parallax {
-    background-image: url('Imagens/ebf425dc-fa80-4e92-8f11-a41b00fa8b5b.jpg');
+    background-image: url('Imagens/WhatsApp\ Image\ 2024-10-31\ at\ 23.22.02.jpeg');
     height: 300px;
 
     background-repeat: no-repeat;
     background-size: 11%;
 
+}
+
+@media (max-width: 768px) {
+    #sobre {
+        padding: 10px; 
+        margin-left: -150px;
+    }
+
+    #sobre h2 {
+        font-size: 1.5em; /* Reduz o tamanho do título */
+    }
+
+    #sobre p {
+        font-size: 0.9em; /* Reduz o tamanho da fonte do parágrafo */
+        margin: 10px 0; /* Margens ajustadas */
+        text-align: left; /* Alinha o texto à esquerda */
+    }
+}
+
+body.dark .parallax {
+    background: url('Imagens/WhatsApp\ Image\ 2024-10-31\ at\ 23.22.02.jpeg') ; 
+    background-size: 15%; /* Isso garante que a imagem cubra todo o espaço */
+    height: 300px;
+    background-repeat: no-repeat;
+
+    background-size: 11%;
+    
+}
+.projeto img {
+    width: 200px; /* Tamanho fixo que você preferir */
+    height: 150px; /* Tamanho fixo que você preferir */
+    object-fit: cover; /* Corta a imagem para preencher o espaço */
+    border-radius: 8px; /* Se quiser bordas arredondadas */
 }
 
 section {
@@ -142,6 +175,7 @@ h2 {
     align-items: center;
     margin: 10px 0;
 }
+
 
 .progress-bar {
     background: #eee;
