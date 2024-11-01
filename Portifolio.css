@@ -137,17 +137,17 @@ nav ul li a:hover {
 @media (max-width: 768px) {
     #sobres {
         padding: 10px; 
-        margin-left: -150px;
+        margin-left: -175px;
     }
 
     #sobre h2 {
-        font-size: 1.5em; /* Reduz o tamanho do título */
+        font-size: 1.0em; /* Reduz o tamanho do título */
     }
 
     #sobre p {
         font-size: 0.9em; /* Reduz o tamanho da fonte do parágrafo */
         margin: 10px 0; /* Margens ajustadas */
-        text-align: left; /* Alinha o texto à esquerda */
+     /* Alinha o texto à esquerda */
     }
 }
 
