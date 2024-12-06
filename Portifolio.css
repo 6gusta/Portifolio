@@ -290,7 +290,7 @@ body.dark section {
 body.dark .modal-content {
     background-color: #555;
 }
-.description {
+.projeto .description {
     position: absolute;
     top: 0;
     left: 0;
@@ -301,19 +301,26 @@ body.dark .modal-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
+    opacity: 0; /* Inicialmente invisível */
     transition: opacity 0.3s ease;
     font-size: 16px;
     padding: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
 }
 
 body.dark footer {
     background: linear-gradient(90deg, #AAF0D1, #D8BFD8);
 }
+.projeto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 .projeto:hover .description {
-    opacity: 1;
+    opacity: 1; /* Torna a descrição visível */
 }
 
 .projeto:hover img {
-    opacity: 0.3; /* Faz a imagem ficar um pouco translúcida ao passar o mouse */
+    opacity: 0.3; /* Faz a imagem ficar mais translúcida */
 }
