@@ -188,27 +188,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-.habilidade {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-}
 
-
-.progress-bar {
-    background: #eee;
-    border-radius: 5px;
-    height: 20px;
-    margin-left: 10px;
-    flex: 1;
-}
-
-.progress {
-    background: rgb(84, 225, 84);
-    height: 100%;
-    border-radius: 5px;
-    transition: width 0.5s;
-}
 
 .grid {
     display: grid;
