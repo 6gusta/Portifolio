@@ -53,6 +53,8 @@ h2 {
     margin-bottom: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 8px;
+    width: 300px; /* Defini o tamanho fixo para cada projeto */
+    flex-shrink: 0; /* Evita que encolha */
 }
 
 /* Efeito de hover para a div do projeto */
@@ -117,9 +119,10 @@ h2 {
 /* Estilo das colunas de projetos */
 .projetos {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Não permite quebra de linha */
     gap: 20px;
-    justify-content: space-between;
+    overflow-x: auto; /* Adiciona rolagem horizontal */
+    padding-bottom: 20px; /* Espaço extra para o scroll não esconder itens */
 }
 
 /* Responsividade para dispositivos móveis */
