@@ -1,91 +1,25 @@
-/* Estilos gerais */
-* {
-    box-sizing: border-box;
-}
-
+/* Estilo básico do corpo */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: #F9F9F9;
-    color: #333;
-    transition: background-color 0.3s, color 0.3s;
 }
 
-header {
-    background: linear-gradient(90deg, #AAF0D1, #D8BFD8);
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+/* Estilo do contêiner principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-button {
-    background-color: green ;
+/* Estilo da barra de navegação */
+nav {
+    background-color: #333;
     color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 20px;
+    padding: 15px;
 }
-
-button:hover {
-    background-color: rgb(83, 210, 83);
-}
-/* Estilo básico dos botões */
-.btn-arrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-transform: uppercase;
-    margin: 20px; 
-    
-}
-
-/* Ícones dentro dos botões */
-.btn-arrow i {
-    font-size: 18px;
-}
-
-/* Efeito ao passar o mouse */
-.btn-arrow:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
-}
-
-/* Efeito ao clicar */
-.btn-arrow:active {
-    transform: scale(0.95);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Diferenciação de botões */
-#projeto-prev {
-    background-color: #2196f3;
-}
-
-#projeto-prev:hover {
-    background-color: #fb8c00;
-}
-
-#projeto-next {
-    background-color: #1e88e5;
-}
-
-#projeto-next:hover {
-    background-color: #fb8c00;
-}
-
 
 nav ul {
     list-style: none;
@@ -94,209 +28,59 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin-right: 20px;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: green;
-    text-decoration: underline;
-}
-
-.parallax {
-    background-image: url('Imagens/WhatsApp\ Image\ 2024-10-31\ at\ 23.22.02.jpeg');
-    height: 300px;
-
-    background-repeat: no-repeat;
-    background-size: 11%;
-
-}
-
-@media (max-width: 768px) {
-    #sobre {
-        padding: 10px; 
-        margin-left: -150px;
-    }
-
-    #sobre h2 {
-        font-size: 1.5em; /* Reduz o tamanho do título */
-    }
-
-    #sobre p {
-        font-size: 0.9em; /* Reduz o tamanho da fonte do parágrafo */
-        margin: 10px 0; /* Margens ajustadas */
-        text-align: left; /* Alinha o texto à esquerda */
-    }
-}
-
-@media (max-width: 768px) {
-    #sobres {
-        padding: 10px; 
-        margin-left: -175px;
-    }
-
-    #sobre h2 {
-        font-size: 1.0em; /* Reduz o tamanho do título */
-    }
-
-    #sobre p {
-        font-size: 0.9em; /* Reduz o tamanho da fonte do parágrafo */
-        margin: 10px 0; /* Margens ajustadas */
-     /* Alinha o texto à esquerda */
-    }
-}
-
-
-body.dark .parallax {
-    background: url('Imagens/WhatsApp\ Image\ 2024-10-31\ at\ 23.22.02.jpeg') ; 
-    background-size: 15%; /* Isso garante que a imagem cubra todo o espaço */
-    height: 300px;
-    background-repeat: no-repeat;
-
-    background-size: 11%;
-    
-}
-.projeto img {
-    width: 200px; /* Tamanho fixo que você preferir */
-    height: 150px; /* Tamanho fixo que você preferir */
-    object-fit: cover; /* Corta a imagem para preencher o espaço */
-    border-radius: 8px; /* Se quiser bordas arredondadas */
-}
-
-section {
-    padding: 30px;
-    margin: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-}
-
-h2 {
-    border-bottom: 2px solid green;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.projeto {
-    padding: 15px;
-    border-left: 4px solid green;
-    background: #F0F0F0;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.projeto img {
-    max-width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.projeto:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    
-}
-
-.projeto a {
-    display: inline-block;
-    margin-top: 10px;
-    background: green;
     color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.projeto a:hover {
-    background: rgb(81, 215, 81);
-    transform: scale(1.05);
-}
-
-/* Modais */
-.modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
-    top: 290px;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgba(0, 0, 0, 0.6); 
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto; /* Espaçamento acima e abaixo do modal */
-    padding: 30px; /* Aumenta o preenchimento interno */
-    border: 1px solid #888;
-    width: 80%; /* Ajuste a largura conforme necessário */
-    max-width: 900px; /* Defina um tamanho máximo para o modal */
-    border-radius: 8px; /* Borda arredondada */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
-}
-
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
     font-weight: bold;
 }
 
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background: linear-gradient(90deg, #AAF0D1, #D8BFD8);
-    color: #fff;
+/* Estilo do título da seção de projetos */
+h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Estilo de cada item de projeto */
+.projeto {
     position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 15px;
+    background: #f0f0f0;
+    border-left: 4px solid green;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
 }
 
-/* Tema Escuro */
-body.dark {
-    background-color: #333;
-    color: #fff;
+/* Efeito de hover para a div do projeto */
+.projeto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-body.dark header {
-    background: linear-gradient(90deg, #AAF0D1, #D8BFD8);
+/* Estilo da imagem dentro do projeto */
+.projeto img {
+    max-width: 100%;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
 }
 
-body.dark section {
-    background: #444;
+/* Efeito de opacidade na imagem ao passar o mouse */
+.projeto:hover img {
+    opacity: 0.3;
 }
 
-body.dark .modal-content {
-    background-color: #555;
-}
+/* Descrição do projeto (que aparece ao passar o mouse) */
 .projeto .description {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Semitransparente */
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
     color: white;
     display: flex;
     justify-content: center;
@@ -305,22 +89,57 @@ body.dark .modal-content {
     transition: opacity 0.3s ease;
     font-size: 16px;
     padding: 10px;
-    border-radius: 8px;
     box-sizing: border-box;
+    border-radius: 8px;
 }
 
-body.dark footer {
-    background: linear-gradient(90deg, #AAF0D1, #D8BFD8);
-}
-.projeto:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
+/* Mostrar a descrição quando o mouse passar sobre o projeto */
 .projeto:hover .description {
-    opacity: 1; /* Torna a descrição visível */
+    opacity: 1;
 }
 
-.projeto:hover img {
-    opacity: 0.3; /* Faz a imagem ficar mais translúcida */
+/* Estilo dos links para visualização do projeto */
+.projeto a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.projeto a:hover {
+    background-color: #45a049;
+}
+
+/* Estilo das colunas de projetos */
+.projetos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .projetos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projeto {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .projeto {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
 }
