@@ -293,3 +293,7 @@ body.dark .modal-content {
 .projeto:hover .description {
     opacity: 1;
 }
+.projeto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
