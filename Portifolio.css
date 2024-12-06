@@ -323,3 +323,6 @@ body.dark .modal-content {
 .projeto:hover .description {
     opacity: 1; /* Torna a descrição visível */
 }
+.projeto:hover img {
+    opacity: 0.3; /* Faz a imagem ficar mais translúcida */
+}
