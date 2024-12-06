@@ -290,7 +290,30 @@ body.dark section {
 body.dark .modal-content {
     background-color: #555;
 }
+.description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semitransparente */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 16px;
+    padding: 10px;
+}
 
 body.dark footer {
     background: linear-gradient(90deg, #AAF0D1, #D8BFD8);
+}
+.projeto:hover .description {
+    opacity: 1;
+}
+
+.projeto:hover img {
+    opacity: 0.3; /* Faz a imagem ficar um pouco translúcida ao passar o mouse */
 }
