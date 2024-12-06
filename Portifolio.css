@@ -289,3 +289,7 @@ body.dark section {
 body.dark .modal-content {
     background-color: #555;
 }
+
+.projeto:hover .description {
+    opacity: 1;
+}
