@@ -70,3 +70,17 @@ const themeToggle = document.getElementById('theme-toggle');
 themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark');
 });
+
+   let idioma = "pt";
+
+        function trocarIdioma() {
+            if (idioma === "pt") {
+                document.getElementById("titulo").innerText = "Welcome to my portfolio";
+                document.getElementById("descricao").innerText = "I am a web developer passionate about technology.";
+                idioma = "en";
+            } else {
+                document.getElementById("titulo").innerText = "Bem-vindo ao meu portfólio";
+                document.getElementById("descricao").innerText = "Sou um desenvolvedor web apaixonado por tecnologia.";
+                idioma = "pt";
+            }
+        }
