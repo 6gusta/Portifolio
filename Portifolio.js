@@ -71,36 +71,3 @@ themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark');
 });
 
- document.addEventListener('DOMContentLoaded', () => {
-    const themeToggleButton = document.getElementById('theme-toggle');
-    const idiomaToggleButton = document.getElementById('idioma-toggle');
-
-    // Função para alternar entre os temas
-    themeToggleButton.addEventListener('click', () => {
-        document.body.classList.toggle('dark-theme');
-    });
-
-   document.addEventListener('DOMContentLoaded', () => {
-    const idiomaToggleButton = document.getElementById('idioma-toggle'); // Supondo que você tenha um botão com id "idioma-toggle"
-
-    // Função para alternar entre os idiomas
-    idiomaToggleButton.addEventListener('click', () => {
-        const isPortuguese = document.documentElement.lang === 'pt-BR';
-        const newLang = isPortuguese ? 'en' : 'pt-BR';
-        document.documentElement.lang = newLang;
-
-        // Trocar conteúdo do idioma
-        toggleIdioma(isPortuguese);
-    });
-
-    // Função para alternar o conteúdo de idioma
-    function toggleIdioma(isPortuguese) {
-        if (isPortuguese) {
-            document.getElementById('titulo').textContent = 'My Portfolio';
-            // Continue com o restante do código...
-        } else {
-            document.getElementById('titulo').textContent = 'Meu Portfólio';
-            // Continue com o restante do código...
-        }
-    }
-});
