@@ -71,16 +71,61 @@ themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark');
 });
 
-   let idioma = "pt";
+ document.addEventListener('DOMContentLoaded', () => {
+    const themeToggleButton = document.getElementById('theme-toggle');
+    const idiomaToggleButton = document.getElementById('idioma-toggle');
 
-        function trocarIdioma() {
-            if (idioma === "pt") {
-                document.getElementById("titulo").innerText = "Welcome to my portfolio";
-                document.getElementById("descricao").innerText = "I am a web developer passionate about technology.";
-                idioma = "en";
-            } else {
-                document.getElementById("titulo").innerText = "Bem-vindo ao meu portfólio";
-                document.getElementById("descricao").innerText = "Sou um desenvolvedor web apaixonado por tecnologia.";
-                idioma = "pt";
-            }
+    // Função para alternar entre os temas
+    themeToggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+    });
+
+    // Função para alternar entre os idiomas
+    idiomaToggleButton.addEventListener('click', () => {
+        const isPortuguese = document.documentElement.lang === 'pt-BR';
+        const newLang = isPortuguese ? 'en' : 'pt-BR';
+        document.documentElement.lang = newLang;
+
+        // Trocar conteúdo do idioma
+        toggleIdioma(isPortuguese);
+    });
+
+    // Função para alternar o conteúdo de idioma
+    function toggleIdioma(isPortuguese) {
+        if (isPortuguese) {
+            document.getElementById('titulo').textContent = 'My Portfolio';
+            document.getElementById('menu-sobre').textContent = 'About Me';
+            document.getElementById('menu-habilidades').textContent = 'Skills';
+            document.getElementById('menu-projetos').textContent = 'Projects';
+            document.getElementById('menu-contato').textContent = 'Contact';
+            document.getElementById('menu-experiencia').textContent = 'Work Experience';
+            document.getElementById('sobre-titulo').textContent = 'About Me';
+            document.getElementById('sobre-texto').textContent = 'My name is Luiz Gustavo, I am 20 years old...';
+            document.getElementById('experiencia-titulo').textContent = 'Work Experience';
+            document.getElementById('experiencia-cargo').innerHTML = '<b>IT Intern</b>';
+            document.getElementById('experiencia-lista').innerHTML = `
+                <li>🔭 Currently working with Lowcode/Nowcode development...</li>
+                <li>🌐 Working with VPS, experience with Hostinger...</li>
+            `;
+            document.getElementById('projetos-titulo').textContent = 'Projects';
+            document.getElementById('contato-titulo').textContent = 'Contact';
+        } else {
+            document.getElementById('titulo').textContent = 'Meu Portfólio';
+            document.getElementById('menu-sobre').textContent = 'Sobre Mim';
+            document.getElementById('menu-habilidades').textContent = 'Habilidades';
+            document.getElementById('menu-projetos').textContent = 'Projetos';
+            document.getElementById('menu-contato').textContent = 'Contato';
+            document.getElementById('menu-experiencia').textContent = 'Experiência Profissional';
+            document.getElementById('sobre-titulo').textContent = 'Sobre Mim';
+            document.getElementById('sobre-texto').textContent = 'Meu nome é Luiz Gustavo, tenho 20 anos...';
+            document.getElementById('experiencia-titulo').textContent = 'Experiência Profissional';
+            document.getElementById('experiencia-cargo').innerHTML = '<b>Estagiário de TI</b>';
+            document.getElementById('experiencia-lista').innerHTML = `
+                <li>🔭 Atualmente, trabalho com o desenvolvimento de aplicações Lowcode/Nowcode...</li>
+                <li>🌐 Atuação com VPS, experiência com Hostinger...</li>
+            `;
+            document.getElementById('projetos-titulo').textContent = 'Projetos';
+            document.getElementById('contato-titulo').textContent = 'Contato';
         }
+    }
+});
