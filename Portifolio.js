@@ -71,34 +71,3 @@ themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark');
 });
 
-  i18next.init({
-            lng: 'pt-BR', // idioma inicial
-            resources: {
-                'pt-BR': {
-                    translation: {
-                        titulo: "Meu Portfólio",
-                        descricao: "Este é o meu portfólio pessoal."
-                    }
-                },
-                'en': {
-                    translation: {
-                        titulo: "My Portfolio",
-                        descricao: "This is my personal portfolio."
-                    }
-                }
-            }
-        }, (err, t) => {
-            // Atualiza o conteúdo na primeira carga
-            document.getElementById('titulo').textContent = i18next.t('titulo');
-            document.getElementById('descricao').textContent = i18next.t('descricao');
-        });
-
-        // Alterando idioma ao clicar no botão
-        document.getElementById('idioma-toggle').addEventListener('click', () => {
-            const newLang = i18next.language === 'pt-BR' ? 'en' : 'pt-BR';
-            i18next.changeLanguage(newLang, (err, t) => {
-                document.getElementById('titulo').textContent = t('titulo');
-                document.getElementById('descricao').textContent = t('descricao');
-            });
-        });
-
