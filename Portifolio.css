@@ -249,7 +249,7 @@ h2 {
     margin: 5% auto; /* Espaçamento acima e abaixo do modal */
     padding: 30px; /* Aumenta o preenchimento interno */
     border: 1px solid #888;
-    width: 90%; /* Ajuste a largura conforme necessário */
+    width: 100%; /* Ajuste a largura conforme necessário */
     max-width: 900px; /* Defina um tamanho máximo para o modal */
     border-radius: 8px; /* Borda arredondada */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
