@@ -1,15 +1,6 @@
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #F9F9F9;
-    color: #333;
-    transition: background-color 0.3s, color 0.3s;
-}
+background-color: #F9F9F9;
+color: #333;
+transition: background-color 0.3s, color 0.3s;
 
 header {
     background: linear-gradient(90deg, #AAF0D1, #D8BFD8);
@@ -19,7 +10,7 @@ header {
 }
 
 button {
-    background-color: green ;
+    background-color: green;
     color: white;
     border: none;
     padding: 10px;
@@ -32,7 +23,7 @@ button {
 button:hover {
     background-color: rgb(83, 210, 83);
 }
-/* Estilo básico dos botões */
+
 .btn-arrow {
     display: inline-flex;
     align-items: center;
@@ -47,28 +38,23 @@ button:hover {
     transition: background-color 0.3s, transform 0.2s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-transform: uppercase;
-    margin: 20px; 
-    
+    margin: 20px;
 }
 
-/* Ícones dentro dos botões */
 .btn-arrow i {
     font-size: 18px;
 }
 
-/* Efeito ao passar o mouse */
 .btn-arrow:hover {
     background-color: #45a049;
     transform: scale(1.05);
 }
 
-/* Efeito ao clicar */
 .btn-arrow:active {
     transform: scale(0.95);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Diferenciação de botões */
 #projeto-prev {
     background-color: #2196f3;
 }
@@ -85,11 +71,10 @@ button:hover {
     background-color: #fb8c00;
 }
 
-
 nav ul {
     list-style: none;
     padding: 0;
-     display: flex
+    display: flex;
 }
 
 nav ul li {
@@ -109,63 +94,41 @@ nav ul li a:hover {
 }
 
 .parallax {
-background: url('Imagens/WhatsApp Image 2025-01-02 at 00.26.29.jpeg');
+    background: url('Imagens/WhatsApp Image 2025-01-02 at 00.26.29.jpeg');
     height: 300px;
-
     background-repeat: no-repeat;
     background-size: 11%;
-
 }
 
 @media (max-width: 768px) {
-    #sobre {
-        padding: 10px; 
+    #sobre, #sobres {
+        padding: 10px;
         margin-left: -150px;
     }
-
-    #sobre h2 {
-        font-size: 1.5em; /* Reduz o tamanho do título */
+    
+    #sobre h2, #sobres h2 {
+        font-size: 1.5em;
     }
-
-    #sobre p {
-        font-size: 0.9em; /* Reduz o tamanho da fonte do parágrafo */
-        margin: 10px 0; /* Margens ajustadas */
-        text-align: left; /* Alinha o texto à esquerda */
-    }
-}
-
-@media (max-width: 768px) {
-    #sobres {
-        padding: 10px; 
-        margin-left: -175px;
-    }
-
-    #sobre h2 {
-        font-size: 1.0em; /* Reduz o tamanho do título */
-    }
-
-    #sobre p {
-        font-size: 0.9em; /* Reduz o tamanho da fonte do parágrafo */
-        margin: 10px 0; /* Margens ajustadas */
-     /* Alinha o texto à esquerda */
+    
+    #sobre p, #sobres p {
+        font-size: 0.9em;
+        margin: 10px 0;
+        text-align: left;
     }
 }
-
 
 body.dark .parallax {
-    background: url('Imagens/WhatsApp Image 2025-01-02 at 00.26.29.jpeg') ; 
-    background-size: 15%; /* Isso garante que a imagem cubra todo o espaço */
+    background: url('Imagens/WhatsApp Image 2025-01-02 at 00.26.29.jpeg');
+    background-size: 15%;
     height: 300px;
     background-repeat: no-repeat;
-
-    background-size: 11%;
-    
 }
+
 .projeto img {
-    width: 200px; /* Tamanho fixo que você preferir */
-    height: 150px; /* Tamanho fixo que você preferir */
-    object-fit: cover; /* Corta a imagem para preencher o espaço */
-    border-radius: 8px; /* Se quiser bordas arredondadas */
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 section {
@@ -187,8 +150,6 @@ h2 {
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
-
-
 
 .grid {
     display: grid;
@@ -212,7 +173,6 @@ h2 {
 .projeto:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    
 }
 
 .projeto a {
@@ -231,30 +191,28 @@ h2 {
     transform: scale(1.05);
 }
 
-/* Modais */
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 200px;
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgba(0, 0, 0, 0.6); 
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 5% auto; /* Espaçamento acima e abaixo do modal */
-    padding: 30px; /* Aumenta o preenchimento interno */
+    margin: 5% auto;
+    padding: 30px;
     border: 1px solid #888;
-    width: 100%; /* Ajuste a largura conforme necessário */
-    max-width: 900px; /* Defina um tamanho máximo para o modal */
-    border-radius: 8px; /* Borda arredondada */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+    width: 100%;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
-
 
 .close {
     color: #aaa;
@@ -273,7 +231,6 @@ footer {
     width: 100%;
 }
 
-/* Tema Escuro */
 body.dark {
     background-color: #333;
     color: #fff;
@@ -289,12 +246,4 @@ body.dark section {
 
 body.dark .modal-content {
     background-color: #555;
-}
-
-.projeto:hover .description {
-    opacity: 1;
-}
-.projeto:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
