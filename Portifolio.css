@@ -1,128 +1,412 @@
-/* Melhorando a tipografia e cores */
+* {
+    box-sizing: border-box;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.6;
-  background-color: #F9F9F9;
-  color: #222;
-  transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F9F9F9;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+/* Estilo do container */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
 }
 
-/* Títulos com peso e cor mais destacados */
-h2 {
-  font-weight: 700;
-  color: #2a7a2a; /* verde mais escuro e harmonioso */
-  border-bottom: 3px solid #2a7a2a;
-  padding-bottom: 8px;
-  margin-bottom: 24px;
-  font-size: 1.8rem;
+/* Esconde o checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
-/* Botões unificados com paleta verde */
-button, .btn-arrow, .projeto a {
-  background-color: #2a7a2a;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 25px;
-  font-weight: 600;
-  box-shadow: 0 4px 10px rgba(42, 122, 42, 0.3);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  border: none;
+/* Slider redondo */
+.slider {
+  position: absolute;
   cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
 }
 
-button:hover, .btn-arrow:hover, .projeto a:hover {
-  background-color: #1f5e1f;
-  transform: scale(1.05);
-  box-shadow: 0 6px 14px rgba(31, 94, 31, 0.5);
+/* Bolinha dentro */
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
 }
 
-/* Espaçamento e alinhamento responsivo no #sobre */
-#sobre {
-  padding: 20px 15px;
-  margin: 0 auto;
-  max-width: 600px;
+/* Quando estiver ligado */
+input:checked + .slider {
+  background-color: #4CAF50;
+}
+
+/* Move a bolinha pra direita */
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+header {
+  background: linear-gradient(90deg, #AAF0D1, #D8BFD8);
+  color: #fff;
   text-align: center;
+  padding: 1rem 2rem;
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem; /* Dá respiro entre os itens em telas pequenas */
+}
+
+header .logo-area {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Espaço entre logo e nome */
+}
+
+header nav img {
+  max-width: 180px;
+  height: auto;
+}
+
+header nav h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: var(--primary);
+}
+
+header .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+header nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+  transition: color 0.2s;
+}
+
+header nav a:hover {
+  color: var(--primary);
+}
+
+header nav .btn-primary {
+  background-color: #4b2c1a !important;
+  color: #fff !important;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+header nav .btn-primary:hover {
+  background-color: #361d10 !important;
+}
+
+button {
+    background-color: green ;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: rgb(83, 210, 83);
+}
+/* Estilo básico dos botões */
+.btn-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    margin: 20px; 
+    
+}
+
+/* Ícones dentro dos botões */
+.btn-arrow i {
+    font-size: 18px;
+}
+
+/* Efeito ao passar o mouse */
+.btn-arrow:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Efeito ao clicar */
+.btn-arrow:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Diferenciação de botões */
+#projeto-prev {
+    background-color: #2196f3;
+}
+
+#projeto-prev:hover {
+    background-color: #fb8c00;
+}
+
+#projeto-next {
+    background-color: #1e88e5;
+}
+
+#projeto-next:hover {
+    background-color: #fb8c00;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+     display: flex
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: green;
+    text-decoration: underline;
+}
+
+.parallax {
+background: url('Imagens/WhatsApp Image 2025-01-02 at 00.26.29.jpeg');
+    height: 300px;
+
+    background-repeat: no-repeat;
+    background-size: 11%;
+
 }
 
 @media (max-width: 768px) {
-  #sobre h2 {
-    font-size: 1.4rem;
-  }
-  #sobre p {
-    font-size: 1rem;
-    text-align: center;
-  }
+    #sobre {
+        padding: 10px; 
+        margin-left: -150px;
+    }
+
+    #sobre h2 {
+        font-size: 1.5em; /* Reduz o tamanho do título */
+    }
+
+    #sobre p {
+        font-size: 0.9em; /* Reduz o tamanho da fonte do parágrafo */
+        margin: 10px 0; /* Margens ajustadas */
+        text-align: left; /* Alinha o texto à esquerda */
+    }
 }
 
-/* Grid de projetos responsivo */
+@media (max-width: 768px) {
+    #sobres {
+        padding: 10px; 
+        margin-left: -175px;
+    }
+
+    #sobre h2 {
+        font-size: 1.0em; /* Reduz o tamanho do título */
+    }
+
+    #sobre p {
+        font-size: 0.9em; /* Reduz o tamanho da fonte do parágrafo */
+        margin: 10px 0; /* Margens ajustadas */
+     /* Alinha o texto à esquerda */
+    }
+}
+
+
+body.dark .parallax {
+    background: url('Imagens/WhatsApp Image 2025-01-02 at 00.26.29.jpeg') ; 
+    background-size: 15%; /* Isso garante que a imagem cubra todo o espaço */
+    height: 300px;
+    background-repeat: no-repeat;
+
+    background-size: 11%;
+    
+}
+.projeto img {
+    width: 200px; /* Tamanho fixo que você preferir */
+    height: 150px; /* Tamanho fixo que você preferir */
+    object-fit: cover; /* Corta a imagem para preencher o espaço */
+    border-radius: 8px; /* Se quiser bordas arredondadas */
+}
+
+section {
+    padding: 30px;
+    margin: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    border-bottom: 2px solid green;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+
+
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 25px;
-  padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-/* Efeito hover mais suave e acessível */
+.projeto {
+    padding: 15px;
+    border-left: 4px solid green;
+    background: #F0F0F0;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projeto img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
 .projeto:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    
 }
 
-/* Fundo do header com sombra sutil e texto mais legível */
-header {
-  background: linear-gradient(90deg, #AAF0D1, #D8BFD8);
-  color: #1b1b1b;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-  border-radius: 0 0 1rem 1rem;
-  padding: 1.5rem 2rem;
-  text-align: center;
+.projeto a {
+    display: inline-block;
+    margin-top: 10px;
+    background: green;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-/* Melhor uso do parallax e background */
-.parallax {
-  background: url('Imagens/WhatsApp Image 2025-01-02 at 00.26.29.jpeg') no-repeat center center fixed;
-  background-size: cover;
-  height: 300px;
+.projeto a:hover {
+    background: rgb(81, 215, 81);
+    transform: scale(1.05);
 }
 
-/* Modo escuro aprimorado */
+/* Modais */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 200px;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.6); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* Espaçamento acima e abaixo do modal */
+    padding: 30px; /* Aumenta o preenchimento interno */
+    border: 1px solid #888;
+    width: 100%; /* Ajuste a largura conforme necessário */
+    max-width: 900px; /* Defina um tamanho máximo para o modal */
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(90deg, #AAF0D1, #D8BFD8);
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Tema Escuro */
 body.dark {
-  background-color: #121212;
-  color: #e0e0e0;
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark header {
+    background: linear-gradient(90deg, #AAF0D1, #D8BFD8);
 }
 
 body.dark section {
-  background-color: #1e1e1e;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
-}
-
-body.dark button, 
-body.dark .btn-arrow, 
-body.dark .projeto a {
-  background-color: #388e3c;
-  box-shadow: 0 4px 10px rgba(56, 142, 60, 0.4);
-}
-
-body.dark button:hover, 
-body.dark .btn-arrow:hover, 
-body.dark .projeto a:hover {
-  background-color: #2e7030;
-  box-shadow: 0 6px 14px rgba(46, 112, 48, 0.7);
-}
-
-/* Melhor organização dos modais */
-.modal-content {
-  background-color: #fff;
-  max-width: 800px;
-  margin: 6% auto;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+    background: #444;
 }
 
 body.dark .modal-content {
-  background-color: #333;
+    background-color: #555;
+}
+
+.projeto:hover .description {
+    opacity: 1;
+}
+.projeto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
