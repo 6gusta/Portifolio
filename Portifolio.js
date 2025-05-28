@@ -1,5 +1,5 @@
 // Função para animação de scroll
-document.addEventListener('scroll', function() {
+document.addEventListener('scroll', function () {
     const sections = document.querySelectorAll('section');
     const scrollPos = window.scrollY + window.innerHeight;
 
@@ -10,14 +10,14 @@ document.addEventListener('scroll', function() {
     });
 });
 
+// Carrossel de projetos
 let currentIndex = 0;
 const projetos = document.querySelectorAll('.projeto');
 const totalProjetos = projetos.length;
-const projetosVisiveis = 4; // Número de projetos para exibir ao mesmo tempo
+const projetosVisiveis = 4;
 
 function mostrarProjetos(index) {
     projetos.forEach((projeto, i) => {
-        // Verifica se o projeto está dentro do intervalo dos 3 itens visíveis
         if (i >= index && i < index + projetosVisiveis) {
             projeto.style.display = 'block';
         } else {
@@ -26,23 +26,20 @@ function mostrarProjetos(index) {
     });
 }
 
-// Mostra os três primeiros projetos na inicialização
 mostrarProjetos(currentIndex);
 
 document.getElementById('projeto-prev').addEventListener('click', () => {
-    // Se o índice for menor que zero, começa a exibir do último grupo de projetos
     currentIndex = (currentIndex <= 0) ? totalProjetos - projetosVisiveis : currentIndex - 1;
     mostrarProjetos(currentIndex);
 });
 
 document.getElementById('projeto-next').addEventListener('click', () => {
-    // Se o índice ultrapassar o último projeto, volta para o começo
     currentIndex = (currentIndex >= totalProjetos - projetosVisiveis) ? 0 : currentIndex + 1;
     mostrarProjetos(currentIndex);
 });
 
 // Validação do formulário de contato
-document.querySelector('form').addEventListener('submit', function(e) {
+document.querySelector('form').addEventListener('submit', function (e) {
     e.preventDefault();
     const nome = document.getElementById('nome').value;
     const email = document.getElementById('email').value;
@@ -65,14 +62,10 @@ function closeModal(modalId) {
     document.getElementById(modalId).style.display = "none";
 }
 
-// Alternar tema
-const themeToggle = document.getElementById('theme-toggle');
-themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-});
+// Alternar tema (apenas com checkbox)
 const checkbox = document.getElementById('modoEscuro');
 
-// Verifica se o usuário já tem preferência salva
+// Aplica o tema salvo
 if (localStorage.getItem('tema') === 'escuro') {
     document.body.classList.add('dark');
     checkbox.checked = true;
@@ -80,12 +73,11 @@ if (localStorage.getItem('tema') === 'escuro') {
 
 checkbox.addEventListener('change', function () {
     document.body.classList.toggle('dark');
-    
-    // Salva a preferência do usuário
+
+    // Salva a preferência
     if (document.body.classList.contains('dark')) {
         localStorage.setItem('tema', 'escuro');
     } else {
         localStorage.setItem('tema', 'claro');
     }
 });
-
