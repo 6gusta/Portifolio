@@ -71,6 +71,6 @@ themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark');
 });
 document.getElementById('modoEscuro').addEventListener('change', () => {
-  document.body.classList.toggle('dark-mode');
+  document.body.classList.toggle('dark');
 });
 
