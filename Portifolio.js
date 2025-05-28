@@ -70,7 +70,22 @@ const themeToggle = document.getElementById('theme-toggle');
 themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark');
 });
-document.getElementById('modoEscuro').addEventListener('change', () => {
-  document.body.classList.toggle('dark');
+const checkbox = document.getElementById('modoEscuro');
+
+// Verifica se o usuário já tem preferência salva
+if (localStorage.getItem('tema') === 'escuro') {
+    document.body.classList.add('dark');
+    checkbox.checked = true;
+}
+
+checkbox.addEventListener('change', function () {
+    document.body.classList.toggle('dark');
+    
+    // Salva a preferência do usuário
+    if (document.body.classList.contains('dark')) {
+        localStorage.setItem('tema', 'escuro');
+    } else {
+        localStorage.setItem('tema', 'claro');
+    }
 });
 
