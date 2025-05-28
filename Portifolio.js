@@ -14,7 +14,7 @@ document.addEventListener('scroll', function () {
 let currentIndex = 0;
 const projetos = document.querySelectorAll('.projeto');
 const totalProjetos = projetos.length;
-const projetosVisiveis = 4;
+const projetosVisiveis = 6;
 
 function mostrarProjetos(index) {
     projetos.forEach((projeto, i) => {
