@@ -1,265 +1,368 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfólio de Estudante de TI</title>
-    <link rel="stylesheet" href="Portifolio.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6012765992413418"
-     crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="Portifolio.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
 
-</head>
-<body>
-<header>
-  <nav>
-    <div class="logo-area">
-      <h1>Meu Portfólio</h1>
-    </div>
-    
-    <div class="nav-links">
-      <a href="#sobre">Sobre Mim</a>
-      <a href="#habilidades">Habilidades</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#contato">Contato</a>
-      <a href="#sobres">Experiência Profissional</a>
-     
-      <label class="switch">
-        <input type="checkbox" id="modoEscuro">
-        <span class="slider"></span>
-      </label>
-    </div>
-  </nav>
-</header>
-
-<section id="sobre" class="fade-in parallax">
-    <h2 style="margin-left: 180px;">Sobre Mim</h2>
-    <p style="margin-left: 180px;">
-        Olá! Me chamo Luiz Gustavo, tenho 20 anos e atuo como Desenvolvedor Back-End Java com experiência prática no ecossistema Spring, especialmente com Spring Boot, Spring Security e JPA. Tenho participado de projetos voltados à construção de APIs RESTful, implementação de autenticação via JWT e gerenciamento eficiente de dados.
-        <br><br>
-        Também possuo experiência com bancos de dados relacionais como MySQL e PostgreSQL, versionamento com Git e desenvolvimento front-end com Angular, onde venho aplicando conhecimentos para criar interfaces dinâmicas e integradas com APIs REST.
-        <br><br>
-        Tenho buscado constantemente evoluir tecnicamente, estudando testes unitários com JUnit e Mockito, além de aprofundar minhas habilidades em Angular para expandir meu conhecimento full-stack.
-        <br><br>
-        🎯 Atualmente, busco uma oportunidade como Desenvolvedor Java Júnior ou Estagiário, onde eu possa contribuir com meu conhecimento técnico, colaborar com o time e seguir me desenvolvendo como profissional back-end e full-stack.
-    </p>
-</section>
-
-<section id="sobres" class="fade-in parallaxx">
-  <h2 style="margin-left: 180px;">Experiência Profissional</h2>
-
-  <!-- Experiência na Up Estágio -->
-  <p style="margin-left: 180px; font-size: 20px;"><b>Estagiário de TI – Up Estágio 🚀</b></p><br>
-  <p style="margin-left: 180px;">Junho 2024</p>
-  <p style="margin-left: 175px;">__________</p>
-  <p style="margin-left: 185px;">Julho 2025</p>
-
-  <p style="margin-left: 170px;">Atuei automatizando processos voltados para a seleção de candidatos, utilizando Google Sheets com JavaScript e ferramentas low-code para otimizar tarefas do dia a dia.</p>
-
-  <p style="margin-left: 170px;">Também criei chatbots e agentes de IA com plataformas como N8N e Typebot, além de participar do desenvolvimento de sistemas como RAG para leitura de informações e um CRM para gestão.</p>
-
-  <p style="margin-left: 170px;">Adquiri experiência na <b>configuração e gerenciamento de VPS</b>, garantindo a estabilidade e disponibilidade dos serviços.</p>
-
-  <hr style="margin: 20px 180px;">
-
-  <!-- Experiência atual na ChatPlus -->
-  <p style="margin-left: 180px; font-size: 20px;"><b>Estagiário de Suporte de TI – ChatPlus 💬</b></p><br>
-  <p style="margin-left: 180px;">Agosto 2025</p>
-  <p style="margin-left: 175px;">__________</p>
-  <p style="margin-left: 185px;">Atual</p>
-
-  <p style="margin-left: 170px;">Atualmente, atuo na ChatPlus, com foco em <b>automação de fluxos</b> usando <b>n8n</b> e na criação de <b>chatbots inteligentes</b> para atendimentos em farmácias.</p>
-
-  <p style="margin-left: 170px;">Minhas responsabilidades envolvem suporte técnico, desenvolvimento de soluções automatizadas, integrações de sistemas e melhoria da comunicação com clientes.</p>
-</section>
-
-<section id="projetos" class="fade-in">
-    <h2>Projetos</h2>
-    <button id="projeto-prev" class="btn-arrow">
-        <i class="fas fa-arrow-left"></i> 
-    </button>
-    <button id="projeto-next" class="btn-arrow">
-       <i class="fas fa-arrow-right"></i>
-    </button>
-    
-  <div class="grid">
-    <div class="projeto">
-        <h3>NativerCoder</h3>
-        <div class="img-container">
-            <img src="Imagens/WhatsApp Image 2024-10-29 at 23.13.32.jpeg" alt="Descrição do Projeto" onclick="openModal('modal1')">
+    <!-- Google Ads -->
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6012765992413418"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="logo-area">
+          <h1>Meu Portfólio</h1>
         </div>
-        <a href="https://github.com/6gusta/NativerCod3r" target="_blank">Ver Projeto</a>
-    </div>
-    <div class="projeto">
-        <h3>Campo Minado</h3>
-        <div class="img-container">
-            <img src="Imagens/unnamed.jpg" alt="Descrição do Projeto 2" onclick="openModal('modal2')">
+        <div class="nav-links">
+          <a href="#sobre">Sobre Mim</a>
+          <a href="#habilidades">Habilidades</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#contato">Contato</a>
+          <a href="#experiencia">Experiência Profissional</a>
+
+          <!-- Switch dark mode -->
+          <label class="switch">
+            <input type="checkbox" id="modoEscuro" />
+            <span class="slider"></span>
+          </label>
         </div>
-        <a href="https://github.com/6gusta/Campo-Minado-CursoJava" target="_blank">Ver Projeto</a>
-    </div>
-    <div class="projeto">
-        <h3>Simulador de Caixa Eletronico</h3>
-        <div class="img-container">
-            <img src="Imagens/6b5c966e-d9b1-43f6-a319-c0f67d195def (1).jpg" alt="Descrição do Projeto 3" onclick="openModal('modal3')">
+      </nav>
+    </header>
+
+    <!-- Sobre Mim -->
+    <section id="sobre" class="fade-in parallax">
+      <h2 style="margin-left: 180px;">Sobre Mim</h2>
+      <p style="margin-left: 180px;">
+        Olá! Me chamo Luiz Gustavo, tenho 20 anos e atuo como Desenvolvedor
+        Back-End Java com experiência prática no ecossistema Spring, especialmente
+        com Spring Boot, Spring Security e JPA. Tenho participado de projetos
+        voltados à construção de APIs RESTful, implementação de autenticação via
+        JWT e gerenciamento eficiente de dados. Também possuo experiência com
+        bancos de dados relacionais como MySQL e PostgreSQL, versionamento com Git
+        e desenvolvimento front-end com Angular, onde venho aplicando conhecimentos
+        para criar interfaces dinâmicas e integradas com APIs REST.
+        <br /><br />
+        Tenho buscado constantemente evoluir tecnicamente, estudando testes
+        unitários com JUnit e Mockito, além de aprofundar minhas habilidades em
+        Angular para expandir meu conhecimento full-stack. 🎯
+        <br /><br />
+        Atualmente, busco uma oportunidade como Desenvolvedor Java Júnior ou
+        Estagiário, onde eu possa contribuir com meu conhecimento técnico,
+        colaborar com o time e seguir me desenvolvendo como profissional back-end e
+        full-stack.
+      </p>
+    </section>
+
+    <!-- Experiência Profissional -->
+    <section id="experiencia" class="fade-in parallaxx">
+      <h2 style="margin-left: 180px;">Experiência Profissional</h2>
+
+      <!-- Experiência na Up Estágio -->
+      <p style="margin-left: 180px; font-size: 20px;"><b>Estagiário de TI – Up Estágio 🚀</b></p><br>
+      <p style="margin-left: 180px;">Junho 2025</p>
+      <p style="margin-left: 175px;">__________</p>
+      <p style="margin-left: 185px;">Julho 2025</p>
+
+      <p style="margin-left: 170px;">Atuei automatizando processos voltados para a seleção de candidatos, utilizando Google Sheets com JavaScript e ferramentas low-code para otimizar tarefas do dia a dia.</p>
+      <p style="margin-left: 170px;">Também criei chatbots e agentes de IA com plataformas como N8N e Typebot, além de participar do desenvolvimento de sistemas como RAG para leitura de informações e um CRM para gestão.</p>
+      <p style="margin-left: 170px;">Adquiri experiência na <b>configuração e gerenciamento de VPS</b>, garantindo a estabilidade e disponibilidade dos serviços.</p>
+
+      <hr style="margin: 20px 180px;">
+
+      <!-- Experiência atual na ChatPlus -->
+      <p style="margin-left: 180px; font-size: 20px;"><b>Estagiário de Suporte de TI – ChatPlus 💬</b></p><br>
+      <p style="margin-left: 180px;">Agosto 2025</p>
+      <p style="margin-left: 175px;">__________</p>
+      <p style="margin-left: 185px;">Atual</p>
+
+      <p style="margin-left: 170px;">Atualmente, atuo na ChatPlus, com foco em <b>automação de fluxos</b> usando <b>n8n</b> e na criação de <b>chatbots inteligentes</b> para atendimentos em farmácias.</p>
+      <p style="margin-left: 170px;">Minhas responsabilidades envolvem suporte técnico, desenvolvimento de soluções automatizadas, integrações de sistemas e melhoria da comunicação com clientes.</p>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="fade-in">
+      <h2>Projetos</h2>
+
+      <button id="projeto-prev" class="btn-arrow">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+      <button id="projeto-next" class="btn-arrow">
+        <i class="fas fa-arrow-right"></i>
+      </button>
+
+      <div class="grid">
+        <!-- Projeto 1 -->
+        <div class="projeto">
+          <h3>NativerCoder</h3>
+          <div class="img-container">
+            <img
+              src="Imagens/WhatsApp Image 2024-10-29 at 23.13.32.jpeg"
+              alt="Descrição do Projeto"
+              onclick="openModal('modal1')"
+            />
+          </div>
+          <a href="https://github.com/6gusta/NativerCod3r" target="_blank">Ver Projeto</a>
         </div>
-        <a href="https://github.com/6gusta/Simulador-De-Caixa-Eletronico" target="_blank">Ver Projeto</a>
-    </div>
-    <div class="projeto">
-        <h3>Busca Vaga TI</h3>
-        <div class="img-container">
-            <img src="Imagens/1276972.png" alt="Descrição do Projeto 4" onclick="openModal('modal4')">
+
+        <!-- Projeto 2 -->
+        <div class="projeto">
+          <h3>Campo Minado</h3>
+          <div class="img-container">
+            <img
+              src="Imagens/unnamed.jpg"
+              alt="Descrição do Projeto 2"
+              onclick="openModal('modal2')"
+            />
+          </div>
+          <a href="https://github.com/6gusta/Campo-Minado-CursoJava" target="_blank">Ver Projeto</a>
         </div>
-        <a href="https://github.com/6gusta/busca-vagas-de-emprego-de-TI/blob/master/static/imagens/1276972.png" target="_blank">Ver Projeto</a>
-    </div>
-    <div class="projeto">
-        <h3>Busca Cep</h3>
-        <div class="img-container">
-            <img src="Imagens/busca-cep-correios.webp" alt="Descrição do Projeto 5" onclick="openModal('modal5')">
+
+        <!-- Projeto 3 -->
+        <div class="projeto">
+          <h3>Simulador de Caixa Eletrônico</h3>
+          <div class="img-container">
+            <img
+              src="Imagens/6b5c966e-d9b1-43f6-a319-c0f67d195def (1).jpg"
+              alt="Descrição do Projeto 3"
+              onclick="openModal('modal3')"
+            />
+          </div>
+          <a href="https://github.com/6gusta/Simulador-De-Caixa-Eletronico" target="_blank">Ver Projeto</a>
         </div>
-        <a href="https://github.com/6gusta/busca-cep" target="_blank">Ver Projeto</a>
-    </div>
-    <div class="projeto">
-        <h3>Site para Lanchonetes</h3>
-        <div class="img-container">
-            <img src="Imagens/wayne-burger.webp" alt="Descrição do Projeto 6" onclick="openModal('modal6')">
+
+        <!-- Projeto 4 -->
+        <div class="projeto">
+          <h3>Busca Vaga TI</h3>
+          <div class="img-container">
+            <img
+              src="Imagens/1276972.png"
+              alt="Descrição do Projeto 4"
+              onclick="openModal('modal4')"
+            />
+          </div>
+          <a href="https://github.com/6gusta/busca-vagas-de-emprego-de-TI" target="_blank">Ver Projeto</a>
         </div>
-        <a href="https://github.com/6gusta/site-reponsivo-para-lanchoonetes" target="_blank">Ver Projeto</a>
-    </div>
-    <div class="projeto">
-        <h3>Gerenciador de Tarefas</h3>
-        <div class="img-container">
-            <img src="Imagens/taskmanager_taskmanager_administradordetarea_1825.webp" alt="Descrição do Projeto 7" onclick="openModal('modal7')">
+
+        <!-- Projeto 5 -->
+        <div class="projeto">
+          <h3>Busca Cep</h3>
+          <div class="img-container">
+            <img
+              src="Imagens/busca-cep-correios.webp"
+              alt="Descrição do Projeto 5"
+              onclick="openModal('modal5')"
+            />
+          </div>
+          <a href="https://github.com/6gusta/busca-cep" target="_blank">Ver Projeto</a>
         </div>
-        <a href="https://github.com/6gusta/GERENCIADOR-DE-TAREFAS" target="_blank">Ver Projeto</a>
-    </div>
-    <div class="projeto">
-        <h3>Chatbot e Gerenciador de pedidos para Restaurantes</h3>
-        <div class="img-container">
-            <img src="Imagens/taskmanager_taskmanager_administradordetarea_1825.webp" alt="Descrição do Projeto 8" onclick="openModal('modal7')">
+
+        <!-- Projeto 6 -->
+        <div class="projeto">
+          <h3>Site para Lanchonetes</h3>
+          <div class="img-container">
+            <img
+              src="Imagens/wayne-burger.webp"
+              alt="Descrição do Projeto 6"
+              onclick="openModal('modal6')"
+            />
+          </div>
+          <a href="https://github.com/6gusta/site-reponsivo-para-lanchoonetes" target="_blank">Ver Projeto</a>
         </div>
-        <a href="https://github.com/6gusta/Chatnot_Pedidos" target="_blank">Ver Projeto</a>
-    </div>
-    <div class="projeto">
-        <h3>Viralar - site doação de ONGs</h3>
-        <div class="img-container">
-            <img src="Imagens/Cachorro.png" alt="Descrição do Projeto 9" onclick="openModal('modal8')">
+
+        <!-- Projeto 7 -->
+        <div class="projeto">
+          <h3>Gerenciador de Tarefas</h3>
+          <div class="img-container">
+            <img
+              src="Imagens/taskmanager_taskmanager_administradordetarea_1825.webp"
+              alt="Descrição do Projeto 7"
+              onclick="openModal('modal7')"
+            />
+          </div>
+          <a href="https://github.com/6gusta/GERENCIADOR-DE-TAREFAS" target="_blank">Ver Projeto</a>
         </div>
-        <a href="https://github.com/6gusta/Angular" target="_blank">Ver Projeto (Front end)</a>
-        <a href="https://github.com/6gusta/ONG-pets-" target="_blank">Ver Projeto (Back end)</a>
-    </div>
+
+        <!-- Projeto 8 -->
+        <div class="projeto">
+          <h3>Chatbot e Gerenciador de pedidos para Restaurantes</h3>
+          <div class="img-container">
+            <img
+              src="Imagens/chatbot-restaurante.png"
+              alt="Descrição do Projeto 8"
+              onclick="openModal('modal8')"
+            />
+          </div>
+          <a href="https://github.com/6gusta/Chatnot_Pedidos" target="_blank">Ver Projeto</a>
+        </div>
+
+        <!-- Projeto 9 -->
+        <div class="projeto">
+          <h3>Viralar - site doação de ongs</h3>
+          <div class="img-container">
+            <img
+              src="Imagens/Cachorro.png"
+              alt="Descrição do Projeto 9"
+              onclick="openModal('modal9')"
+            />
+          </div>
+          <a href="https://github.com/6gusta/Angular" target="_blank">Ver Projeto (Front end)</a>
+          <a href="https://github.com/6gusta/ONG-pets-" target="_blank">Ver Projeto (Back end)</a>
+        </div>
+        <div class="projeto">
+  <h3>Ecommerce - site de Vendas de Roupa</h3>
+  <div class="img-container">
+    <img
+      src="Imagens/Ecomeccer.png"
+      alt="Descrição do Projeto 10"
+      onclick="openModal('modal10')"
+    />
   </div>
-</section>
+  <a href="https://github.com/6gusta/E-commerce-Front" target="_blank">Ver Projeto (Front end)</a>
+  <a href="https://github.com/6gusta/E-commerce" target="_blank">Ver Projeto (Back end)</a>
+</div>
+      </div>
+      <!-- Projeto 10 -->
+<!-- Projeto 10 -->
 
-<section id="contato" class="fade-in">
-    <h2>Contato</h2>
-    <form>
-      <p><b>Email: <a href="mailto:gustalpcarvalho@gmail.com">gustalpcarvalho@gmail.com</a></b></p>
-      <p><b>Telefone: <a href="tel:+5561991018333">61991763642</a></b></p>
-      <p><b>GitHub: <a href="https://github.com/6gusta/" target="_blank">https://github.com/6gusta/</a></b></p>
-      <p><b>Meu Currículo: <a href="https://github.com/6gusta/Portifolio/blob/main/Imagens/Curriculo_Luiz_Gustavo_Ajustado%20(2).docx">Currículo</a></b></p>
-      <p><b>LinkedIn: <a href="https://www.linkedin.com/in/luiz-gustavo-pereira-de-carvalho-26085b270/?originalSubdomain=br" target="_blank">https://www.linkedin.com/in/luiz-gustavo-pereira-de-carvalho-26085b270/?originalSubdomain=br</a></b></p>
-    </form>
-</section>
 
-<footer>
-    <p>&copy; <b>2024 Luiz Gustavo. Todos os direitos reservados.</b></p>
-</footer>
 
-<!-- Modais -->
-<div id="modal1" class="modal">
-    <div class="modal-content">
+    </section>
+
+       
+       
+
+
+    <!-- Contato -->
+    <section id="contato" class="fade-in">
+      <h2>Contato</h2>
+      <form>
+        <p><b>Email: <a href="mailto:gustalpcarvalho@gmail.com">gustalpcarvalho@gmail.com</a></b></p>
+        <p><b>Telefone: <a href="tel:+5561991763642">61991763642</a></b></p>
+        <p><b>GitHub: <a href="https://github.com/6gusta/" target="_blank">https://github.com/6gusta/</a></b></p>
+        <p><b>Meu currículo <a href="https://github.com/6gusta/Portifolio/blob/main/Imagens/Curriculo_Luiz_Gustavo_Ajustado%20(2).docx">: Currículo</a></b></p>
+        <p><b>LinkedIn: <a href="https://www.linkedin.com/in/luiz-gustavo-pereira-de-carvalho-26085b270/?originalSubdomain=br" target="_blank">Perfil</a></b></p>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; <b>2025 Luiz Gustavo. Todos os direitos reservados.</b></p>
+    </footer>
+
+    <!-- ==================== MODAIS ==================== -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
         <span class="close" onclick="closeModal('modal1')">&times;</span>
-        <h2>Detalhes do Projeto 1</h2>
-        <p>Descrição do projeto: É uma plataforma de ensino com objetivo de ensinar programação e língua inglesa de forma simples.</p>
-        <p>Tecnologias utilizadas: HTML, CSS, JavaScript no lado do cliente e JAVA(Spring) no lado do servidor.</p>
+        <h2>NativerCoder</h2>
+        <p>Plataforma de ensino que combina programação e inglês de forma simples.</p>
+        <p><b>Tecnologias:</b> HTML, CSS, JavaScript, Java (Spring)</p>
+      </div>
     </div>
-</div>
 
-<div id="modal2" class="modal">
-    <div class="modal-content">
+    <div id="modal2" class="modal">
+      <div class="modal-content">
         <span class="close" onclick="closeModal('modal2')">&times;</span>
-        <h2>Detalhes do Projeto 2</h2>
-        <p>Descrição do projeto: Desenvolvi este projeto durante meu curso de Java para praticar conceitos básicos da linguagem. Recriei o jogo Campo Minado, aplicando técnicas de POO, programação funcional (streams, lambdas, forEach), tratamento de erros e testes unitários.</p>
-        <p>Tecnologias utilizadas: HTML, CSS, JavaScript no lado do cliente e JAVA(Spring) no lado do servidor.</p>
+        <h2>Campo Minado</h2>
+        <p>Recriação do jogo Campo Minado para praticar Java e POO.</p>
+        <p><b>Tecnologias:</b> Java (POO, Streams, JUnit), HTML, CSS</p>
+      </div>
     </div>
-</div>
 
-<div id="modal3" class="modal">
-    <div class="modal-content">
+    <div id="modal3" class="modal">
+      <div class="modal-content">
         <span class="close" onclick="closeModal('modal3')">&times;</span>
-        <h2>Detalhes do Projeto 3</h2>
-        <p>Descrição do projeto: Este projeto tem como finalidade simular o comportamento de um caixa eletrônico.</p>
-        <p>Tecnologias utilizadas: HTML, CSS, JavaScript no lado do cliente e JAVA(Spring) no lado do servidor.</p>
+        <h2>Simulador de Caixa Eletrônico</h2>
+        <p>Projeto para simular um caixa eletrônico com regras de saque, depósito e saldo.</p>
+        <p><b>Tecnologias:</b> Java, Spring</p>
+      </div>
     </div>
-</div>
 
-<div id="modal4" class="modal">
-    <div class="modal-content">
+    <div id="modal4" class="modal">
+      <div class="modal-content">
         <span class="close" onclick="closeModal('modal4')">&times;</span>
-        <h2>Detalhes do Projeto 4</h2>
-        <p>Descrição do projeto: Um site dedicado à busca de oportunidades de emprego na área de TI, direcionando diretamente para o site principal das vagas disponíveis.</p>
-        <p>Tecnologias utilizadas: HTML, CSS, JavaScript</p>
+        <h2>Busca Vaga TI</h2>
+        <p>Aplicação para buscar vagas de TI em portais e direcionar candidatos.</p>
+        <p><b>Tecnologias:</b> HTML, CSS, JavaScript</p>
+      </div>
     </div>
-</div>
 
-<div id="modal5" class="modal">
-    <div class="modal-content">
+    <div id="modal5" class="modal">
+      <div class="modal-content">
         <span class="close" onclick="closeModal('modal5')">&times;</span>
-        <h2>Detalhes do Projeto 5</h2>
-        <p>Descrição do projeto: Desenvolvi um busca CEP totalmente responsivo e fácil de usar.</p>
-        <p>Tecnologias utilizadas: HTML, CSS, JavaScript no cliente e Python (Flask) com API do Correio no servidor.</p>
+        <h2>Busca CEP</h2>
+        <p>Ferramenta simples para buscar endereços a partir do CEP.</p>
+        <p><b>Tecnologias:</b> HTML, CSS, JS, Python (Flask), API Correios</p>
+      </div>
     </div>
-</div>
 
-<div id="modal6" class="modal">
-    <div class="modal-content">
+    <div id="modal6" class="modal">
+      <div class="modal-content">
         <span class="close" onclick="closeModal('modal6')">&times;</span>
-        <h2>Detalhes do Projeto 6</h2>
-        <p>Este projeto foi criado com a intenção de facilitar os comerciantes nas vendas, oferecendo a opção de ter seu próprio site.</p>
-        <p>Tecnologias utilizadas: HTML, CSS, JavaScript</p>
+        <h2>Site para Lanchonetes</h2>
+        <p>Site responsivo desenvolvido para lanchonetes divulgarem seus produtos.</p>
+        <p><b>Tecnologias:</b> HTML, CSS, JavaScript</p>
+      </div>
     </div>
-</div>
 
-<div id="modal7" class="modal">
-    <div class="modal-content">
+    <div id="modal7" class="modal">
+      <div class="modal-content">
         <span class="close" onclick="closeModal('modal7')">&times;</span>
-        <h2>Gerenciador de Tarefas - Python, Flask e SQLAlchemy</h2>
-        <p>Esse projeto é um <strong>Gerenciador de Tarefas</strong> simples e eficiente, desenvolvido com <strong>Python</strong>, <strong>Flask</strong> e <strong>SQLAlchemy</strong> para interação com um banco de dados <strong>MySQL</strong>.</p>
-        <h3>Funcionalidades</h3>
-        <ul>
-            <li><strong>Autenticação de usuários</strong> com login seguro.</li>
-            <li><strong>Gestão de tarefas</strong>: Adicione, edite e exclua tarefas.</li>
-            <li><strong>Verificação de tarefas pendentes</strong>: Fique de olho nas tarefas que precisam ser concluídas.</li>
-            <li><strong>Interface intuitiva</strong> e fácil de usar.</li>
-        </ul>
-        <h3>Tecnologias</h3>
-        <ul>
-            <li>Python</li>
-            <li>Flask</li>
-            <li>SQLAlchemy</li>
-            <li>MySQL</li>
-        </ul>
-        <h3>Como Rodar</h3>
-        <ol>
-            <li>Clone o repositório:</li>
-        </ol>
-        <pre><code>git clone https://github.com/6gusta/gerenciador-de-tarefas.git</code></pre>
+        <h2>Gerenciador de Tarefas</h2>
+        <p>CRUD completo de tarefas com autenticação e banco de dados.</p>
+        <p><b>Tecnologias:</b> Python, Flask, SQLAlchemy, MySQL</p>
+      </div>
     </div>
-</div>
 
-<div id="modal8" class="modal">
-    <div class="modal-content">
+    <div id="modal8" class="modal">
+      <div class="modal-content">
         <span class="close" onclick="closeModal('modal8')">&times;</span>
-        <h2>Viralar - Site de Doação de ONGs</h2>
-        <p>Projeto de front-end em Angular e back-end para gerenciar pets e doações.</p>
-        <p>Tecnologias utilizadas: Angular, HTML, CSS, JavaScript, Node.js, API REST.</p>
+        <h2>Chatbot e Gerenciador de Pedidos</h2>
+        <p>Automação de pedidos para restaurantes com chatbot integrado.</p>
+        <p><b>Tecnologias:</b> Node.js, Typebot, N8N</p>
+      </div>
     </div>
-</div>
 
-<script src="Portifolio.js"></script>
-</body>
+    <div id="modal9" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal9')">&times;</span>
+        <h2>Viralar</h2>
+        <p>Plataforma para doação de animais e suporte a ONGs.</p>
+        <p><b>Tecnologias:</b> Angular (Front-end), Spring Boot (Back-end)</p>
+      </div>
+    </div>
+
+     <div id="modal10" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('modal10')">&times;</span>
+    <h2>Loja de Vendas de Roupas</h2>
+    <p>Plataforma Ecommerce para vendas de roupas.</p>
+    <p><b>Tecnologias:</b> Angular (Front-end), Spring Boot (Back-end)</p>
+  </div>
+</div>
+  
+
+
+    <script src="Portifolio.js"></script>
+  </body>
 </html>
